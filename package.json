@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svgo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vite plugin to import and compress svg files with SVGO",
   "main": "dist/index.js",
   "exports": {
@@ -34,10 +34,12 @@
   "devDependencies": {
     "@types/node": "18.11.0",
     "@types/svgo": "2.6.4",
-    "svgo": "2.8.0",
     "typescript": "4.6.4"
   },
+  "dependencies": {
+    "svgo": "2.8.0"
+  },
   "peerDependencies": {
-    "vite": "3.1.0"
+    "vite": "3.1.4"
   }
 }
