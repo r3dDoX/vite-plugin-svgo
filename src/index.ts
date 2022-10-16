@@ -23,7 +23,7 @@ export default function viteSvgPlugin(svgoOptimizeOptions: Omit<OptimizeOptions,
           ...svgoOptimizeOptions,
         });
         if (optimizedSvg.error === undefined) {
-          return `export default '${optimizedSvg['data']}';`;
+          return `export default \`${optimizedSvg['data']}\`;`;
         } else {
           console.warn(`${id} errored during svg optimization: `, optimizedSvg.error);
         }
