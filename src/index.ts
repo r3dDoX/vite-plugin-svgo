@@ -17,6 +17,7 @@ export default function viteSvgPlugin(svgoOptimizeOptions: Omit<OptimizeOptions,
           svgCode = await fs.promises.readFile(idWithoutQuery, 'utf8');
         } catch (ex) {
           console.warn(`${id} couldn't be loaded by vite-svg-plugin: `, ex);
+          return;
         }
         const optimizedSvg = optimize(svgCode, {
           path: idWithoutQuery,
