@@ -11,22 +11,21 @@ export default function viteSvgPlugin(svgoOptimizeOptions: Omit<OptimizeOptions,
 
     async load(id: string) {
       if (fileRegex.test(id)) {
-        const idWithoutQuery = id.replace(/\?.*$/, '');
         let svgCode;
         try {
-          svgCode = await fs.promises.readFile(idWithoutQuery, 'utf8');
+          svgCode = await fs.promises.readFile(id, 'utf8');
         } catch (ex) {
-          console.warn(`${id} couldn't be loaded by vite-svg-plugin: `, ex);
+          console.warn(`${id} couldn't be loaded by vite-plugin-svgo: `, ex);
           return;
         }
         const optimizedSvg = optimize(svgCode, {
-          path: idWithoutQuery,
+          path: id,
           ...svgoOptimizeOptions,
         });
         if (optimizedSvg.error === undefined) {
           return `export default \`${optimizedSvg['data']}\`;`;
         } else {
-          console.warn(`${id} errored during svg optimization: `, optimizedSvg.error);
+          console.error(`${id} errored during svg optimization: `, optimizedSvg.error);
         }
       }
     },
