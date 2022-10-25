@@ -1,6 +1,9 @@
 # Vite Plugin SVGO
 
-Vite plugin to load and optimize SVG files as raw string. For the optimization SVGO is used.
+> Vite plugin to load and optimize SVG files as raw string. For the optimization SVGO is used.
+
+![npm](https://img.shields.io/npm/dt/vite-plugin-svgo?style=flat-square)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/r3dDoX/vite-plugin-svgo?color=brightgreen&style=flat-square)
 
 ```typescript
 // Lit-Element example
