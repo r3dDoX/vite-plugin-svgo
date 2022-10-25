@@ -32,11 +32,24 @@ export default defineConfig({
 ```
 
 ## SVGO Configuration
+
 The plugin accepts custom optimize options.
 
 ```typescript
 // vite.config.ts
 svg({
   multipass: true,
+  plugins: [
+    {
+      name: 'preset-default',
+      params: {
+        overrides: {
+          convertColors: {
+            currentColor: true,
+          },
+        },
+      },
+    },
+  ],
 })
 ```
