@@ -2,11 +2,12 @@ import {optimize, OptimizeOptions} from 'svgo';
 import fs from 'fs';
 import {Plugin} from 'vite';
 
+const VITE_PLUGIN_NAME = 'vite-plugin-svgo';
 const fileRegex = /\.svg$/;
 
 export default function viteSvgPlugin(svgoOptimizeOptions: Omit<OptimizeOptions, 'path'> = {}): Plugin {
   return {
-    name: 'vite-svg-plugin',
+    name: VITE_PLUGIN_NAME,
     enforce: 'pre',
 
     async load(id: string) {
