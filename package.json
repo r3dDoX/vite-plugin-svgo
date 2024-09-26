@@ -38,6 +38,7 @@
     "vite": ">=4.0.2"
   },
   "devDependencies": {
+    "@types/estree": "1.0.6",
     "@types/node": "22.7.2",
     "typescript": "5.6.2"
   }
