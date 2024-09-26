@@ -32,13 +32,13 @@
   },
   "homepage": "https://github.com/r3dDoX/vite-plugin-svgo#readme",
   "devDependencies": {
-    "@types/node": "20.10.0"
+    "@types/node": "20.10.0",
+    "typescript": "4.9.4"
   },
   "dependencies": {
     "svgo": "3.0.4"
   },
   "peerDependencies": {
-    "typescript": ">=4.9.4",
     "vite": ">=4.0.2"
   }
 }
