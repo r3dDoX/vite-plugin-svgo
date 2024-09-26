@@ -13,8 +13,7 @@
     "/exports"
   ],
   "scripts": {
-    "build": "tsc",
-    "prepublish": "npm run build"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
