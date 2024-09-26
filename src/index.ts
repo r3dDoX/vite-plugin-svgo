@@ -12,7 +12,7 @@ export default function viteSvgPlugin(svgoOptimizeOptions: Omit<Config, 'path'> 
 
     async load(id: string) {
       if (fileRegex.test(id)) {
-        let svgCode;
+        let svgCode: string;
         try {
           svgCode = await fs.promises.readFile(id, 'utf8');
         } catch (exception) {
