@@ -31,9 +31,6 @@
     "url": "https://github.com/r3dDoX/vite-plugin-svgo/issues"
   },
   "homepage": "https://github.com/r3dDoX/vite-plugin-svgo#readme",
-  "devDependencies": {
-    "@types/node": "20.10.0"
-  },
   "dependencies": {
     "svgo": "3.0.4"
   },
