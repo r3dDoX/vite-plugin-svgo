@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "exports": {
     "import": "./exports/import.mjs",
-    "require": "./exports/require.cjs",
-    "types": "./dist/index.d.ts"
+    "require": "./exports/require.cjs"
   },
   "files": [
     "/dist",
