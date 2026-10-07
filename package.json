@@ -41,7 +41,7 @@
     "typescript": "6.0.3"
   },
   "dependencies": {
-    "svgo": "4.0.1"
+    "svgo": "4.1.0"
   },
   "peerDependencies": {
     "typescript": ">=4.9.4",
